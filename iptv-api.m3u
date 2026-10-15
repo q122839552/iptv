@@ -1,5 +1,5 @@
 #EXTM3U x-tvg-url="https://guovin.github.io/iptv-api/epg.gz"
-# IPTV-API 生成 · 精选版（央视/卫视/体育/电影/动画/剧场/港澳台/内蒙古）
+# IPTV-API 生成 · 精选修正版（含台标；港澳台已实测择优）
 # 来源：guovin.github.io/iptv-api (Guovin/iptv-api, GPL-3.0)
 
 #EXTINF:-1 tvg-id="CCTV-1" tvg-name="CCTV-1" tvg-logo="https://i.imgur.com/TpA3cUl.png" group-title="📺央视频道",CCTV-1
@@ -144,16 +144,14 @@ http://r.jdshipin.com/ZQ4kN
 http://31.43.191.125:8080/restream/restream/34629
 #EXTINF:-1 tvg-id="凤凰资讯" tvg-name="凤凰资讯" tvg-logo="https://gitee.com/suxuang/logo/raw/master/mylogo/凤凰资讯台.png" group-title="🌊港·澳·台",凤凰资讯
 http://r.jdshipin.com/0Rp07
-#EXTINF:-1 tvg-id="凤凰香港" tvg-name="凤凰香港" tvg-logo="https://gitee.com/suxuang/logo/raw/master/mylogo/凤凰香港台.png" group-title="🌊港·澳·台" catchup="append" catchup-source="?playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}",凤凰香港
-#EXTVLCOPT:http-user-agent=iPhone
+#EXTINF:-1 tvg-id="凤凰香港" tvg-name="凤凰香港" tvg-logo="https://gitee.com/suxuang/logo/raw/master/mylogo/凤凰香港台.png" group-title="🌊港·澳·台",凤凰香港
+http://r.jdshipin.com/yDoTN
 #EXTINF:-1 tvg-id="凤凰中文" tvg-name="凤凰卫视" tvg-logo="https://gitee.com/suxuang/logo/raw/master/mylogo/凤凰中文台.png" group-title="🌊港·澳·台",凤凰卫视
 http://r.jdshipin.com/cCCzW
 #EXTINF:-1 tvg-id="TVBS亚洲" tvg-name="TVBS亚洲" tvg-logo="https://www.xn--rgv465a.top/tvlogo/TVBS亚洲.png" group-title="🌊港·澳·台",TVBS亚洲
 https://m.italkbbtv.com/live/62cc940d4725b5305843ac53
 #EXTINF:-1 tvg-id="纬来体育台" tvg-name="纬来体育" tvg-logo="https://www.xn--rgv465a.top/tvlogo/纬来体育.png" group-title="🌊港·澳·台",纬来体育
 https://epg.pw/stream/8855a9936e37e608a0ec8a014cce1673dee9c5d68d560da376cc92e5edef2b25.m3u8
-#EXTINF:-1 tvg-id="纬来育乐台" tvg-name="纬来育乐" tvg-logo="https://www.xn--rgv465a.top/tvlogo/纬来育乐.png" group-title="🌊港·澳·台",纬来育乐
-https://hls-gateway.vpstv.net/streams/477081.m3u8
 #EXTINF:-1 tvg-id="ViuTV" tvg-name="Viutv" tvg-logo="https://gitee.com/suxuang/logo/raw/master/mylogo/ViuTV.png" group-title="🌊港·澳·台",Viutv
 http://r.jdshipin.com/vSJvl
 #EXTINF:-1 tvg-id="无线新闻台" tvg-name="无线新闻" tvg-logo="https://gitee.com/suxuang/logo/raw/master/mylogo/无线新闻.png" group-title="🌊港·澳·台",无线新闻
@@ -162,8 +160,6 @@ http://r.jdshipin.com/CkuBd
 https://epg.pw/stream/6b49e3faa38adda85abab446f032dc1e686baa0760a9cfa66e2df8fd6fe3b445.m3u8
 #EXTINF:-1 tvg-id="东森超视" tvg-name="东森超视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/东森超视.png" group-title="🌊港·澳·台",东森超视
 http://38.64.72.148:80/hls/modn/list/2013/chunklist1.m3u8
-#EXTINF:-1 tvg-id="靖天资讯台" tvg-name="靖天资讯" tvg-logo="https://www.xn--rgv465a.top/tvlogo/靖天资讯.png" group-title="🌊港·澳·台",靖天资讯
-https://hls-gateway.vpstv.net/streams/476258.m3u8
 #EXTINF:-1 tvg-id="CHC家庭影院" tvg-name="CHC家庭影院" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CHC家庭影院.png" group-title="🎬电影频道",CHC家庭影院
 http://63.141.230.178:82/gslb/zbdq5.m3u8?id=chcjt
 #EXTINF:-1 tvg-id="CHC动作电影" tvg-name="CHC动作电影" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CHC动作电影.png" group-title="🎬电影频道",CHC动作电影
