@@ -1,59 +1,87 @@
-# 内蒙古联通 IPTV 直播源（带台标）
+# IPTV 直播源合集（内蒙古联通 · 用户自用）
 
-内蒙古联通 IPTV 组播源，共 **128 个频道**，已去重、分组，并配好频道台标。
-
----
-
-## ⚠️ 使用前置条件（必读）
-
-本列表是**运营商内网的「组播（multicast）」源**（组播段 `239.125.x.x`），因此：
-
-1. 必须处于**内蒙古联通的 IPTV 网络环境**内；
-2. 必须先用 **udpxy / msd_lite 把组播转成 HTTP 单播**，播放器才能播。
-
-> 如果直接订阅、且没有做组播转单播：**只能看到频道列表和台标，点开无法播放**。
-> 请把文件里的 `192.168.1.100:4022` 替换成你自己的 udpxy 地址与端口。
+本仓库存放个人使用的 IPTV 直播源列表（m3u）。**推荐用国内可直连的镜像地址订阅。**
 
 ---
 
-## 订阅地址
+## 📺 订阅链接（复制到 APTV / TiviMate / Kodi 等）
 
-| 方式 | 链接 |
-|---|---|
-| **推荐**（国内可直连，无需代理） | `https://gh-proxy.com/https://raw.githubusercontent.com/q122839552/iptv/main/nmg-iptv.m3u` |
-| CDN 加速 | `https://fastly.jsdelivr.net/gh/q122839552/iptv@main/nmg-iptv.m3u` |
-| 直连（国内需代理） | `https://raw.githubusercontent.com/q122839552/iptv/main/nmg-iptv.m3u` |
+| 文件 | 内容 | 订阅链接 |
+|---|---|---|
+| **`result.m3u`** ⭐ | **78 台**（本机实测有效的 IPv4 频道） | `https://gh-proxy.com/https://raw.githubusercontent.com/q122839552/iptv/main/result.m3u` |
+| `iptv-api.m3u` | 131 台（含中国香港/中国澳门/中国台湾地区频道） | `https://gh-proxy.com/https://raw.githubusercontent.com/q122839552/iptv/main/iptv-api.m3u` |
+| `nmg-iptv.m3u` | 128 台（内蒙古联通 IPTV 组播源，**需先搭 udpxy**） | `https://gh-proxy.com/https://raw.githubusercontent.com/q122839552/iptv/main/nmg-iptv.m3u` |
 
----
-
-## 使用方法
-
-1. 搭建好 udpxy/msd_lite 后，把 `nmg-iptv.m3u` 里所有 `192.168.1.100:4022` 替换成你的真实地址，例如：
-   ```
-   http://192.168.1.2:4022/udp/239.125.2.66:4120
-   ```
-2. 把上面的订阅地址填入播放器（APTV / TiviMate / Kodi / VLC 等）。
+> 备选 CDN 写法：`https://fastly.jsdelivr.net/gh/q122839552/iptv@main/文件名`
 
 ---
 
-## 频道分组
+## 🧩 链接是怎么来的（自助拼接规则）
 
-- **央视**：CCTV1–17、CCTV16-4K、CGTN 系列、CETV 等
-- **卫视**：全国各省级卫视
-- **内蒙古**：内蒙古卫视 / 蒙语卫视 / 经济 / 文体 / 农牧 / 少儿、鄂尔多斯系列、杭锦旗等
-- **购物**：好享购物、家有购物、央广购物、聚鲨环球等
-- **其他**：各类剧场、影院、体育、纪实等
+订阅链接不用"生成"，是**拼出来的**，记住这个公式：
+
+```
+① GitHub 原始地址：
+   https://raw.githubusercontent.com/{用户名}/{仓库}/{分支}/{文件名}
+
+② 套上国内能直连的镜像：
+   https://gh-proxy.com/{第①步那一整串}
+```
+
+本仓库的参数：用户名 `q122839552`、仓库 `iptv`、分支 `main`。所以任意文件的链接就是：
+
+```
+https://gh-proxy.com/https://raw.githubusercontent.com/q122839552/iptv/main/【文件名】
+```
+
+**换个文件名就行**，以后放任何新文件进去都能自己拼出链接。
 
 ---
 
-## 台标来源
+## 🔄 怎么自己更新文件（不用求人）
 
-频道台标来自开源项目 [fanmingming/live](https://github.com/fanmingming/live)，经 jsDelivr 加速加载。
+**关键：链接永远不变！只需要替换文件内容。**
+
+在 GitHub 网页上（电脑 / 手机都行）：
+
+1. 打开仓库 → **点进要更新的文件**（如 `result.m3u`）
+2. 点右上角 **铅笔图标 ✏️（Edit）**
+3. 在编辑框里 **Ctrl+A 全选 → 删除 → 粘贴新内容**
+4. 页面底部填提交说明 → 点 **Commit changes（提交更改）**
+5. 完事！**链接一个字没变**，APTV 那边刷新订阅即可拿到新列表
 
 ---
 
-## 声明
+## ⏱️ 多久更新一次
 
-- 本列表仅供个人学习与测试使用。
+- 公网源**不必每天更新**，**2～3 天一次**即可；
+- 央视、卫视等大台较稳；冷门台/地方台容易失效；
+- **最省事的做法**：平时不管，等发现卡顿、黑屏变多时再跑一次；
+- 想自动化：用桌面端 IPTV-API 的「定时任务」功能（需电脑常开）。
+
+---
+
+## ⚠️ 关于 `nmg-iptv.m3u`（内蒙古联通组播源）
+
+它画质最好，但有**两个硬前提**：
+
+1. **必须开通联通的 IPTV 业务**（组播数据只在专门的 IPTV VLAN 内）；
+2. **必须自己搭「组播转单播」**（udpxy / msd_lite），并把文件里的 `192.168.1.100:4022` 换成自己的地址。
+
+未满足以上条件时，订阅它只会显示频道列表、**无法播放**。
+
+---
+
+## 📌 说明
+
+- 台标（频道图标）来自开源项目 [fanmingming/live](https://github.com/fanmingming/live)，经 jsDelivr 加速。
+- 列表由 [Guovin/iptv-api](https://github.com/Guovin/iptv-api) 工具采集 / 校验 / 测速后生成。
+- 公网源随时可能失效，结果不保证长期稳定。
+
+---
+
+## 📣 声明
+
+- 本仓库仅供个人学习与测试使用。
 - 请仅观看你已获得合法授权的内容，遵守《广播电视管理条例》等当地法律法规。
 - 请勿用于传播、转发或公开分发未经授权的直播源。
