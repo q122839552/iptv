@@ -1,4 +1,4 @@
-#EXTM3U x-tvg-url="http://epg.51zmt.top:8000/e.xml.gz"
+#EXTM3U x-tvg-url="https://s.102031.xyz/xml/a1999882e.xml.gz"
 # 内蒙古联通 IPTV · 带 fanmingming 台标（128 个频道，已去重）
 # 使用前：把所有 192.168.1.100:4022 换成你自己的 udpxy/msd_lite 地址与端口
 # 台标：github.com/fanmingming/live（jsDelivr 加速）
